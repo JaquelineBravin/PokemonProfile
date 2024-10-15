@@ -3,32 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>PokeProfile</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <section id="content" class="content">
-      <div id="container" class="container">
-        <h1>Pokemon name</h1>
-        <h6>ID</h6>
-        <ol class="type" id="type">
-          <li>type</li>
-          <li>type</li>
-        </ol>
-      </div>
-
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
-        alt=""
-      />
+      <h1>${pokemon.name}</h1>
+      <h6>${pokemon.order}</h6>
+      <ol class="types"></ol>
+      <img src="" alt="" />
       <div class="stats">
-        <h3>Stats</h3>
-        <div class="abilities">
-          <h6>attack: 50</h6>
-          <h6>attack: 50</h6>
-        </div>
+        <table>
+          <thead class="abilities">
+            <th>Stats</th>
+          </thead>
+          <tbody>
+            <tr class="abilitiesDetails">
+              <td>${statSlot.stat.name}</td>
+              <td>${statSlot.base_stat}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
+
+    <script src="js/functions.js"></script>
     <script src="js/pokemon-details.js"></script>
   </body>
 </html>
